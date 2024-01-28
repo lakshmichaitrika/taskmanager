@@ -74,7 +74,7 @@ const TaskForm = ({ onSubmit }) => {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title style={{color:"black"}}>Task Updated Successfully</Modal.Title>
+          <Modal.Title style={{color:"black"}}>Task Added Successfully</Modal.Title>
         </Modal.Header>
         
       </Modal>
