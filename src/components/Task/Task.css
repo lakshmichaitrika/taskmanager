@@ -1,0 +1,75 @@
+.task{
+margin: 5px;
+    max-width: 30%;
+    padding: 3px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+       border-radius: 6px;
+        align-items: center;
+        justify-content: center;
+       border: 2px solid #9F33FF;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.icons{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+h5{
+    border-bottom: 2px solid #9F33FF;
+    text-transform: uppercase;
+    color: #01fe87;
+
+
+}
+
+.icons-buttons{
+   width: 100%;
+    margin-bottom: 10px;
+    background-color: transparent;
+    font-size: 5vw;
+    
+
+}
+
+h2{
+    font-size: 13vw;
+}
+
+@media screen and (min-width:600px){
+    .icons-buttons{
+        font-size: 2vw;
+    }
+
+    h2{
+        font-size: 2vw;
+    }
+}
+
+.icons-buttons:hover{
+    margin-bottom: 30px;
+    cursor: pointer;
+    color: #01fe87;
+
+}
+.button1{
+    margin: 10px;
+    
+}
+
+
+.heading{
+    color: black;
+
+}
+
+.update-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
