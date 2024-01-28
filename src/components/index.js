@@ -13,7 +13,7 @@ import "./index.css"
 const TaskManager = () => {
   const [tasks, setTasks] = useState([]);
   useEffect(()=>{
-    axios.get('https://taskmanager/tasks.onrender.com',{})
+    axios.get('http://localhost:4000/tasks',{})
     .then(res=>{
       //console.log(res)
       setTasks(res.data)
@@ -28,7 +28,7 @@ const TaskManager = () => {
 
   const addTask = (task) => {
     setTasks([...tasks, { id:uuidv4() , ...task }]);
-    axios.post('https://taskmanager/tasks.onrender.com',task)
+    axios.post('http://localhost:4000/tasks',task)
     .then(res=>{
       //console.log(res)
     })
@@ -39,7 +39,7 @@ const TaskManager = () => {
   };
 
   const deleteTask = (taskId) => {
-    axios.delete(`https://taskmanager/tasks/${taskId}.onrender.com`)
+    axios.delete(`http://localhost:4000/tasks/${taskId}`)
     .then(res=>{
       //console.log(res)
       const newTasks=tasks.filter((task) => task.id !== taskId)
@@ -52,7 +52,7 @@ const TaskManager = () => {
   };
 
   const updateTask = (taskId, updatedTask) => {
-    axios.put(`https://taskmanager/tasks/${taskId}.onrender.com`,updatedTask)
+    axios.put(`http://localhost:4000/tasks/${taskId}`,updatedTask)
     .then(res=>{
       //console.log(res)
       setTasks(tasks.map((task) => (task.id === taskId ? { ...task, ...updatedTask } : task)));
