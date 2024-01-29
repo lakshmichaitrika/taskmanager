@@ -104,7 +104,7 @@ Create a new branch for your feature or bug fix.
 Make your changes.
 Submit a pull request to the main repository's main branch.
 License
-This project is licensed under the MIT License.
+This project is licensed under the ISC License.
 
 
 

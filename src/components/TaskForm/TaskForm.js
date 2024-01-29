@@ -6,11 +6,12 @@ import Modal from 'react-bootstrap/Modal';
 
 const TaskForm = ({ onSubmit }) => {
   const [title, setTitle] = useState('');
-  const [show, setShow] = useState(false);
-  const [update,setUpdate]=useState(false)
   const [description, setDescription] = useState('');
  
-  console.log(update,"update")
+  const [show, setShow] = useState(false);
+  const [update,setUpdate]=useState(false)
+  
+  //console.log(update,"update")
   const handleShow = () => setUpdate(true);
   const handleClose = () => setUpdate(false);
  
@@ -31,7 +32,7 @@ const TaskForm = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title,"title")
+    //console.log(title,"title")
     
     if (title===''){
       setShow(true)

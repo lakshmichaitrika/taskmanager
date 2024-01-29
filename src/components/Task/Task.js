@@ -8,11 +8,13 @@ import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 
 const TaskItem = ({ task, onDelete, onUpdate }) => {
-  const [isEditing, setEditing] = useState(false);
+  
   const [title, setTitle] = useState(task.title);
   const [description, setDescription] = useState(task.description);
-  const [show, setShow] = useState(false);
   
+  const [isEditing, setEditing] = useState(false);
+  
+  const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   
   
