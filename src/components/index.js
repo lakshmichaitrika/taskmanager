@@ -39,11 +39,12 @@ const TaskManager = () => {
   };
 
   const deleteTask = (taskId) => {
+    setTasks(tasks.filter((task) => task.id !== taskId));
     axios.delete(`http://localhost:4000/tasks/${taskId}`)
     .then(res=>{
-      //console.log(res)
-      const newTasks=tasks.filter((task) => task.id !== taskId)
-      setTasks(newTasks);
+      console.log(res)
+      //const newTasks=tasks.filter((task) => task.id !== taskId)
+      //setTasks(newTasks);
     })
     .catch(err=>{
       console.log(err)
@@ -52,10 +53,11 @@ const TaskManager = () => {
   };
 
   const updateTask = (taskId, updatedTask) => {
+    setTasks(tasks.map((task) => (task.id === taskId ? { ...task, ...updatedTask } : task)));
     axios.put(`http://localhost:4000/tasks/${taskId}`,updatedTask)
     .then(res=>{
-      //console.log(res)
-      setTasks(tasks.map((task) => (task.id === taskId ? { ...task, ...updatedTask } : task)));
+      console.log(res)
+      //setTasks(tasks.map((task) => (task.id === taskId ? { ...task, ...updatedTask } : task)));
       
     })
     .catch(err=>{
