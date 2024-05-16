@@ -72,7 +72,7 @@ const TaskManager = () => {
 			<Route path='/' element={<Home />} />
 			<Route path='/task' element={<TaskForm onSubmit={addTask} />}/>
       <Route path='/alltask' element={ <TaskList tasks={tasks} onDelete={deleteTask} onUpdate={updateTask} />}/>
-			<Route path='*' element ={<Notfound/>}/>
+			<Route path='*' element ={<Home/>}/>
 		</Routes>
     </div>
   );
