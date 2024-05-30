@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import TaskList from './TaskList/TaskList';
 import TaskForm from './TaskForm/TaskForm';
 import Home from './Home/Home';
-import Notfound from './notfound/Notfound'
+// import Notfound from './notfound/Notfound'
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -72,7 +72,7 @@ const TaskManager = () => {
 			<Route path='/' element={<Home />} />
 			<Route path='/task' element={<TaskForm onSubmit={addTask} />}/>
       <Route path='/alltask' element={ <TaskList tasks={tasks} onDelete={deleteTask} onUpdate={updateTask} />}/>
-			<Route path='*' element ={<Home/>}/>
+			
 		</Routes>
     </div>
   );
